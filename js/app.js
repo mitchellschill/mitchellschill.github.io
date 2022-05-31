@@ -42,7 +42,7 @@ var InitDemo = function () {
 		alert('Your browser does not support WebGL');
 	}
 
-	gl.clearColor(0.1333333333333333, 0.1333333333333333, 0.1333333333333333, 1.0);
+	gl.clearColor(0.129412 , 0.145098, 0.160784, 1.0);
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 	gl.enable(gl.DEPTH_TEST);
 	gl.enable(gl.CULL_FACE);
@@ -220,7 +220,7 @@ var InitDemo = function () {
 		mat4.scale(worldMatrix , worldMatrix , [scale,scale,scale]);
 		gl.uniformMatrix4fv(matWorldUniformLocation, gl.FALSE, worldMatrix);
 
-		gl.clearColor(0.1333333333333333, 0.1333333333333333, 0.1333333333333333, 1.0);
+		gl.clearColor(0.129412 , 0.145098, 0.160784, 1.0);
 		gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
 		gl.drawElements(gl.TRIANGLES, boxIndices.length, gl.UNSIGNED_SHORT, 0);
 		
