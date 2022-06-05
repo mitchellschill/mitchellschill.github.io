@@ -48,6 +48,9 @@ var InitDemo = function () {
 	gl.enable(gl.CULL_FACE);
 	gl.frontFace(gl.CCW);
 	gl.cullFace(gl.BACK);
+	
+	//canvas.width = window.innerWidth
+	//canvas.height = window.innerHeight
 
 	//
 	// Create shaders
@@ -210,7 +213,7 @@ var InitDemo = function () {
 	var identityMatrix = new Float32Array(16);
 	mat4.identity(identityMatrix);
 	var angle = 0;
-	var scale = 0.5;
+	var scale = 1;
 	var countDirection = 1;
 	var loop = function () {
 		angle = performance.now() / 500 / 2 * 2 * Math.PI;
